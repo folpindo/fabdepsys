@@ -1,0 +1,24 @@
+{
+    "name": "folpindo/fabdepsys",
+    "type": "library",
+    "description": "Deployment System Library",
+    "keywords": ["deployment system"],
+    "homepage": "http://github.com/folpindo/fabdepsys",
+    "authors": [{
+            "name": "folpindo@gmail.com"
+        }],
+    "require-dev":{
+        "phpunit/phpunit": "4.3.*",
+        "phpunit/php-invoker": "*",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-skeleton-generator" : "~2.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Fabdepsys": ".",
+			"Calculator":"."
+        },
+        "psr-4": {
+        }
+    }
+}
