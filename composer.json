@@ -1,0 +1,23 @@
+{
+    "name": "usap/package-deployment-system",
+    "type": "library",
+    "description": "Build, Packaging, and Deployment System Library",
+    "keywords": ["build", "packaging", "deployment"],
+    "homepage": "http://usautoparts.com",
+    "authors": [{
+            "name": "folpindo@gmail.com"
+        }],
+    "require-dev":{
+        "phpunit/phpunit": "4.3.*",
+        "phpunit/php-invoker": "*",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-skeleton-generator" : "~2.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Fabdepsys": "."
+        },
+        "psr-4": {
+        }
+    }
+}
