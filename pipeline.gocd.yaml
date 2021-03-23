@@ -1,0 +1,35 @@
+format_version: 10
+pipelines:
+  my-pipeline-as-code:
+    group: defaultGroup
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      component-dependency:
+        git: https://github.com/folpindo/fabdepsys.git
+        username: folpindo
+        shallow_clone: false
+        auto_update: true
+        branch: develop
+        destination: fabdepsys-develop
+        encrypted_password: AES:NdKoShfn+xyGITKe21ZTPg==:cuBXEhx6i3+y/RWYwC0MiQ==
+    stages:
+    - stage1:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          job-and-tasks-1:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - ls
+                - -a
+                command: 'CMD:'
+                run_if: passed
+
